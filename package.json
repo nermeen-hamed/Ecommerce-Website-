@@ -1,0 +1,25 @@
+{
+  "name": "ecommerceautpmationproject",
+  "version": "1.0.0",
+  "description": "test",
+  "main": "index.js",
+  "scripts": {
+    "test": "cypress open"
+  },
+  "keywords": [
+    "cypress",
+    "cucumber"
+  ],
+  "author": "nermeen",
+  "license": "ISC",
+  "devDependencies": {
+    "allure-commandline": "^2.27.0",
+    "allure-cypress": "^2.15.0",
+    "cypress": "^13.7.0",
+    "cypress-cucumber-preprocessor": "^4.3.1",
+    "hamjest": "^4.1.0"
+  },
+  "cypress-cucumber-preprocessor": {
+    "nonGlobalStepDefinitions": true
+  }
+}

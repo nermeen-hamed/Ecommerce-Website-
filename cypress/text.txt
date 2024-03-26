@@ -1,0 +1,23 @@
+npm init
+npm install cypress --save-dev
+npm run test
+npm install --save-dev cypress-cucumber-preprocessor
+in config file :
+
+const { defineConfig } = require("cypress");
+const cucumber = require("cypress-cucumber-preprocessor").default;
+module.exports = defineConfig({
+  e2e: {
+    setupNodeEvents(on, config) {
+      on("file:preprocessor", cucumber());
+    },
+     baseUrl:"http://live.techpanda.org/index.php/",
+    specPattern: "cypress/integration/*.feature",
+  },
+});
+in packageJason
+"cypress-cucumber-preprocessor": {
+    "nonGlobalStepDefinitions": false
+  }
+npx allure serve allure-results    run allure 
+
